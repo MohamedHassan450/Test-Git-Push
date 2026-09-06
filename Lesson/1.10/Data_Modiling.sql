@@ -18,4 +18,4 @@ PRAGMA show_tables;
 
 Describe job_postings_fact;
 
---get
+--gethub
