@@ -20,15 +20,6 @@ VALUES
     (2, 'Data Engineer'),
     (3, 'Senior Data Engineer');
 
--- Add Column
-ALTER TABLE bismallah.staging.job_title_name
-ADD COLUMN Role_Salary INT;
-
--- Update Salary Example
-UPDATE bismallah.staging.job_title_name
-SET Role_Salary = 150000
-WHERE ID = 2;
-
 -- Rename Table
 ALTER TABLE bismallah.staging.job_title_name
 RENAME TO Data_Roles;
@@ -36,6 +27,9 @@ RENAME TO Data_Roles;
 -- Insert More Roles
 INSERT INTO bismallah.staging.Data_Roles (ID, Title)
 VALUES
+    (4, 'AI Engineer'),
+    (5, 'Deep Learning Engineer'),
+    (6, 'NLP Engineer'),
     (7, 'Database Administrator'),
     (8, 'ETL Developer'),
     (9, 'Big Data Engineer'),
@@ -79,10 +73,7 @@ VALUES
     (47, 'Head of Data Science'),
     (48, 'Chief Data Officer'),
     (49, 'Data Steward'),
-    (50, 'Data Compliance Officer'),
-    (51, 'AI Engineer'),
-    (52, 'Deep Learning Engineer'),
-    (53, 'NLP Engineer');
+    (50, 'Data Compliance Officer');
 
 -- Check Results
 SELECT * FROM bismallah.staging.Data_Roles;
